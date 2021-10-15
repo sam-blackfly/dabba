@@ -7,5 +7,6 @@ import (
 )
 
 func main() {
+
 	fmt.Printf("%s All checks %s\n", colors.Info("✓"), colors.Success("PASSED"))
 }
