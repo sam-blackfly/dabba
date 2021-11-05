@@ -30,9 +30,7 @@ var ForkCmd = &cobra.Command{
 }
 
 func run(args []string) {
-	log.Printf("Running %v as pid %v\n", args[0], os.Getpid())
-
-	cmd := exec.Command("/proc/self/exe", append([]string{"fork"}, args[0:]...)...)
+	cmd := exec.Command("/proc/self/exe", append([]string{"fork"}, args...)...)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
